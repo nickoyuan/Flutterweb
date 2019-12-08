@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/utils/ResponsiveLayout.dart';
 import 'package:flutter_web/widgets/NavBar.dart';
+import 'LargeChild.dart';
+import 'SmallChild.dart';
 
 void main() => runApp(MyApp());
 
@@ -72,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              NavBar()
+              NavBar(),
+              Body()
             ],
           ),
         ),
@@ -85,8 +88,8 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-//      largeScreen: LargeChild(),
-//      smallScreen: SmallChild(),
+      largeScreen: LargeChild(),
+      smallScreen: SmallChild(),
     );
   }
 }
